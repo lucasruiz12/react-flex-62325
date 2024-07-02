@@ -1,0 +1,20 @@
+.nav-bar{
+    background-color: darkgray;
+    display: grid;
+    align-items: center;
+    width: 100%;
+}
+.nav-items{
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+.item-nav{
+    list-style-type: none;
+}
+.item-text{
+    color: white;
+}
+.item-text:hover{
+    cursor: pointer
+}

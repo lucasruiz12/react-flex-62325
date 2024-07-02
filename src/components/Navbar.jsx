@@ -1,17 +1,18 @@
 import React from 'react';
+import './Navbar.css'
 
 function Navbar(){
     return(
-        <div>
-            <ul>
-                <li>
-                    <a>Home</a>
+        <div className="nav-bar">
+            <ul className="nav-items">
+                <li className="item-nav">
+                    <a className="item-text">Home</a>
                 </li>
-                <li>
-                    <a>Productos</a>
+                <li className="item-nav">
+                    <a className="item-text">Productos</a>
                 </li>
-                <li>
-                    <a>Contacto</a>
+                <li className="item-nav">
+                    <a className="item-text">Contacto</a>
                 </li>
             </ul>
         </div>
