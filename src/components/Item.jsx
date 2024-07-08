@@ -4,9 +4,10 @@ import './Item.css';
 
 const Item = ({ nombre, precio, index }) => {
     return (
-        <div key={index} style={{ display: "grid", width: "10rem", height: "10rem", border: "solid 1px black", margin: "2rem 0", padding: "1rem", borderRadius: "0.5rem" }}>
-            <h3>{nombre}</h3>
-            <p>${precio}</p>
+        <div key={index} className="card-item">
+            <h3 style={{justifySelf: "center"}}>{nombre}</h3>
+            <img className="img" src="https://img.freepik.com/fotos-premium/botella-vino-blanco-tapon-rojo-etiqueta_664601-8179.jpg" />
+            <p>Precio: <b>${precio}</b></p>
             <button>Agregar</button>
         </div>
     );

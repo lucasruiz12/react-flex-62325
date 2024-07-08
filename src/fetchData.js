@@ -19,6 +19,21 @@ const productos = [
        nombre: "Gaseosa",
        precio: 5 
     },
+    {
+       id: 5,
+       nombre: "Vino",
+       precio: 15 
+    },
+    {
+       id: 6,
+       nombre: "Champagne",
+       precio: 35 
+    },
+    {
+       id: 7,
+       nombre: "Amargo",
+       precio: 8 
+    },
 ];
 
 export default function fetchData(){

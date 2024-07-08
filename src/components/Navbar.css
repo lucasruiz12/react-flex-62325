@@ -8,8 +8,11 @@
     display: flex;
     width: 95%;
     justify-content: space-around;
+    align-items: center;
 }
 .item-nav{
+    display: flex;
+    align-items: center;
     list-style-type: none;
 }
 .item-text{

@@ -1,0 +1,24 @@
+.card-item {
+    display: grid;
+    justify-content: center;
+    width: 15rem;
+    height: 20rem;
+    border: solid 1px #b3b3b3;
+    margin: 2rem 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: 0.1s;
+}
+
+.img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+}
+
+.card-item:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.1s;
+    background-color: #f5f5f5;
+}
