@@ -11,6 +11,7 @@ const ItemList = ({productos}) => {
                         <Item key={index} index={index} nombre={el.nombre} precio={el.precio} />
                     )
                 })
+                // renderProducts()
             }
         </div>
     );
