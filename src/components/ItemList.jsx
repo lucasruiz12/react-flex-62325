@@ -6,9 +6,9 @@ const ItemList = ({productos}) => {
     return (
         <div className="item-list">
             {
-                productos.map((el, index) => {
+                productos.map((el) => {
                     return (
-                        <Item key={index} index={index} nombre={el.nombre} precio={el.precio} />
+                        <Item key={el.id} id={el.id} nombre={el.nombre} precio={el.precio} />
                     )
                 })
                 // renderProducts()

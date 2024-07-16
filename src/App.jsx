@@ -3,6 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
 import fetchData from './fetchData';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NotFound from './components/NotFound';
+import ItemDetail from './components/ItemDetail';
 
 function App() {
 
@@ -30,10 +33,40 @@ function App() {
 
   }, []);
 
+  /*
+  Paso a paso de Ruteos
+
+  1. Instalar react-router-dom.
+  2. BrowserRouter.
+  3. Routes.
+  4. Route al cual le pasamos path y element.
+
+  5. Dentro de path le pasamos la ruta. Dentro de element, lo que queremos renderizar. Podemos pasar un componente que lo podemos armar ahí mismo, o le podemos pasar un componente que ya esté hecho en otro lado
+  
+  */
+
+  /*
+  
+  Paso a paso para los parámetros:
+
+  1. En el path del Route le ponemos :id o lo que queramos.
+  2. En el componente que queremos traer, hacemos uso del hook de react-router-dom llamado useParams y aprovechamos la información que se le envía por parámetros (en la url).
+  3. Con el id que recibimos por params, vamos a buscar y encontrar dentro de nuestros productos al producto seleccionado cuyo id corresponde al de los params (Todo esto lo hacemos dentro de un useEffect).
+
+  DETALLE NO MENOR: LO QUE RECIBIMOS POR PARAMS ES UN STRING, ENTONCES SI QUEREMOS COMPARAR NÚMEROS, TENEMOS QUE HACER PARSEINT. Sino, no nos va a pasar la validación con ===
+  
+  */
+
   return (
     <>
-      <Navbar />
-      <ItemListContainer productos={productos} />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer productos={productos} />} />
+          <Route path="/detalle/:id" element={<ItemDetail productos={productos} />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemList from './ItemList';
+import Navbar from './Navbar';
 
 const ItemListContainer = ({ productos }) => {
 
