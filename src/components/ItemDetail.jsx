@@ -5,18 +5,6 @@ import Item from './Item';
 const ItemDetail = ({ productos }) => {
     const { id } = useParams();
 
-    /*
-    
-    Cuando hacemos por ejemplo:
-
-    const params = useParams();
-
-    Lo que tenemos en params sería algo del tipo {id: "2"} pero podemos hacer destructuring.
-
-    const { nombreDeLaPropiedad } = useParams(); // En este caso nombreDeLaPropiedad sería id como está hecho en la línea 6
-    
-    */
-
     const [productoSeleccionado, setProductoSeleccionado] = useState({});
     
     useEffect(() => {

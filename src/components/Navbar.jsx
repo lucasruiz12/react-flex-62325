@@ -13,11 +13,6 @@ function Navbar() {
                         <Logo />
                     </Link>
                 </li>
-                {/* <li className="item-nav">
-                    <Link to="/">
-                        <a className="item-text">Home</a>
-                    </Link>
-                </li> */}
                 <li className="item-nav">
                     <Link to="/productos">
                         <a className="item-text">Productos</a>
@@ -29,9 +24,7 @@ function Navbar() {
                     </Link>
                 </li>
                 <li className="item-nav">
-                    <Link to="/cart">
-                        <CartWidget />
-                    </Link>
+                    <CartWidget />
                 </li>
             </ul>
         </div>
