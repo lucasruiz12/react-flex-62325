@@ -5,11 +5,24 @@ import { useAppContext } from './Context';
 
 const ItemListContainer = () => {
 
-    const { cargarData, productos } = useAppContext();
+    const { cargarData, productos, carrito } = useAppContext();
 
     useEffect(() => {
         cargarData();
-    });
+    }, []);
+
+    // useEffect(() => {
+    //     console.log("Se modificó el carrito");
+    // }, [carrito]);
+
+    useEffect(() => {
+
+    })
+
+    // useEffect(() => {
+    //     console.log("Estoy empezando a cargar productos");
+    // },[]);
+
 
     return (
         <>
